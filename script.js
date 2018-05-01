@@ -1,4 +1,5 @@
 document.getElementById("findButton").onclick = function() {
+    anagramResult.textContent = "";
     let typedText = document.getElementById("input").value;
     let organizedTypedText = alphabetize(typedText);
     var anaString = []
@@ -11,7 +12,7 @@ document.getElementById("findButton").onclick = function() {
     //console.log(anaString);
     let printAnaString = anaString.join(" ");
     //console.log(printAnaString);
-    let anagramResult = document.createElement("p");
+    //let anagramResult = document.createElement("p");
     anagramResult.textContent = printAnaString;
     document.body.appendChild(anagramResult);
 }
@@ -19,3 +20,5 @@ document.getElementById("findButton").onclick = function() {
 function alphabetize(a) {
     return a.toLowerCase().split("").sort().join("").trim();
 }
+
+let anagramResult = document.createElement("p");
